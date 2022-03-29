@@ -14,6 +14,16 @@ namespace Farmacie
     {
         static void Main(string[] args)
         {
+
+            if(args.Length==0)
+            {
+                Console.WriteLine("nu merge lniai de comanda");
+            }
+            else
+            {
+                Console.WriteLine("merge linia de comanda " + args.Length);
+            }
+
             string numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
             AdminMed_Fisier adminMed = new AdminMed_Fisier(numeFisier);
             int nrMed = adminMed.GetNrMed();
